@@ -46,6 +46,14 @@ ggplot(data = x, mapping = aes(x = mean_age)) +
 
 **Prompt:** Next, let's explore the `reg_inc` variable in more detail by creating another histogram. Again, be sure to use an appropriate number of bins using the `bins` argument. You will need to re-scale the x-axis. Explore the difference between using a log scale versus a square root scale. Which one is better for this particular dataset, and why? `reg_inc` is the increase in voter registration in a community. Do you believe those outlier values? Why or why not?
 
+```{r}
+ggplot(data = x, mapping = aes(x = reg_inc)) +
+  geom_histogram(bins = 30, color = "white") + 
+  labs(title = "Registered Voters in Kenya by Block",
+       y = "Count",
+       x = "Age")
+```
+
 
 ### Scene 3
 
